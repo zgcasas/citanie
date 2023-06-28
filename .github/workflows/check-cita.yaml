@@ -1,6 +1,7 @@
 name: Check Cita NIE
 
 on:
+  push:
   schedule:
     - cron: '*/5 * * * *'
 
