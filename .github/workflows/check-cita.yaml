@@ -16,7 +16,6 @@ jobs:
 
       - name: Run test
         run: |
-          chmod +x *.sh
           ./check.sh
 
       - name: Send mail
