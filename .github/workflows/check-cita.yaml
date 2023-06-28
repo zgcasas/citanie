@@ -1,0 +1,45 @@
+name: Check Cita NIE
+
+on:
+  push:
+
+jobs:
+  check:
+    runs-on: ubuntu
+    steps:
+      - name: Checkout app
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 0
+
+      - name: Run test
+        run: |
+          ./check.sh
+
+      - name: Send mail
+        uses: dawidd6/action-send-mail@v3
+        if: ${{ always() }}
+        with:
+          # Specify connection via URL (replaces server_address, server_port, secure,
+          # username and password)
+          #
+          # Format:
+          #
+          #  * smtp://user:password@server:port
+          #  * smtp+starttls://user:password@server:port
+          connection_url: ${{secrets.MAIL_CONNECTION}}
+          # Optional (recommended) mail server username:
+          username: ${{secrets.MAIL_USERNAME}}
+          # Optional (recommended) mail server password:
+          password: ${{secrets.MAIL_PASSWORD}}
+          # Required mail subject:
+          subject: Cita NIE disponible!
+          # Required recipients' addresses:
+          to: joakync@hotmail.com
+          # Required sender full name (address can be skipped):
+          from: jcasas@kooomo.com
+          # Optional HTML body read from file:
+          html_body: <a href="https://sede.administracionespublicas.gob.es/pagina/index/directorio/icpplus">https://sede.administracionespublicas.gob.es/pagina/index/directorio/icpplus</a>
+          # Optional carbon copy recipients:
+          cc:
+

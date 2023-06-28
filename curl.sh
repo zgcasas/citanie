@@ -1,0 +1,20 @@
+ curl -s 'https://icp.administracionelectronica.gob.es/icpplustieb/acCitar' \
+    -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7' \
+    -H 'Accept-Language: en-GB,en-US;q=0.9,en;q=0.8,es;q=0.7' \
+    -H 'Cache-Control: max-age=0' \
+    -H 'Connection: keep-alive' \
+    -H 'Content-Type: application/x-www-form-urlencoded' \
+    -H 'Cookie: f5_cspm=1234; JSESSIONID=5B4194748AD982F85AB77D5916437D08.appdmzmol1_19063_icpplustieb; TS01ae8c5d=01a3cd4c045967255cf1bcfbb5df22bae32cbe601029c9485ad05981b65854496831cb082ff3c63fc6b89b726540346d5d93696c5d19511033d1733cb1ca28df228305a3bec38e37863741cf657e7972894daa0f47; dtCookie=v_4_srv_4_sn_944360FE9CDD76B4BF4B072FBF2BA7D6_perc_100000_ol_0_mul_1_app-3Afc0be45c7c7075ff_0; TS00000000076=083a28b6b8ab2800916e23dd377a2232c2af58166e0c7bfa457c3e65627a782359b97aabc8ce028e3c06e8be11e9843708ebaa3fa309d00085bf87b8ed8e0b7326b37ebcc8a8cbf07e900bc9653bd783d425d209b2181e1e6e5bea3766480396ff38b1ec1204ca008196b585ed9c336f0a7276aad3c0305b34269db4ab558c913ddb70e7ed528a7aac305ba5311b5f2e8baa90746cf168c4def62d6d8cfd8b0caf4f2e03bc95d70e859bfce7ee582738aad7fc645fbf0eef815a846349b8bb2f021604930f1dadda912bc10429b12147a8abf35ab184dd8991cd7e40993170d34906d1bd1ee97ea49f028b2519ab1905f451bdf8695f9670e8ff73ebf0ef4a68a21f4a858be86209; TSPD_101_DID=083a28b6b8ab2800916e23dd377a2232c2af58166e0c7bfa457c3e65627a782359b97aabc8ce028e3c06e8be11e9843708ebaa3fa30638008dde389ff761769d213cbbd65706fc9e00aadc2ab383504b5d06e60d3240295989c77ccb11c66ce6c54ad4d67e46db62722b65f587fb890c; TSPD_101=083a28b6b8ab28004ebba8e70ac4a19be8ce3e14525478f47ab4ac52686964f2b1ea3a1f9356269d6a2965a7b1f39583081ae999c0051800b908f883cc5685fe72b2ab1b0f4bdd01d9ba1ca193434d91; TS01629f81=01a3cd4c046e08aabfd581602091469eb9ff090198f0f12b5e44fb37b89bf72c938b3dd433afc48c64c2980a36506805dafbf3a0fefe791188c9534e95d17f0518b8d673b1d078cd805961b212568811f20f2b232e52923544928813f2cc5d9c5d9443d703; TSf1e2d148029=083a28b6b8ab2800d818bf26499b4e7b8f1531976459cd0c17816ecfe1a7fc320f96f9c13663a512be36c95d57a0d384; TSb5dce861027=083a28b6b8ab2000c11f23574639b05cc076bb7ba94ce25b8b7e539d79b623c13fd23d5502268ffe08ee725cd111300044acac4b0df3647cd602f9262d0b35a7dff3e9aa9a2c240b59840bb2b157051e2eb9bf0b0411c32b2df8844a6f562fc9; TSf1e2d148077=083a28b6b8ab2800a84aafc0ecb06966c6ea51a2e76773e88e7e4de68fff1f6e1f3854532362dbf4aa552bec40e51a48088f0b2c1f172000ddc9005743f25353646e260d253bbbbdfc9b79a453504fdde3c5631324b21145' \
+    -H 'Origin: https://icp.administracionelectronica.gob.es' \
+    -H 'Referer: https://icp.administracionelectronica.gob.es/icpplustieb/acValidarEntrada' \
+    -H 'Sec-Fetch-Dest: document' \
+    -H 'Sec-Fetch-Mode: navigate' \
+    -H 'Sec-Fetch-Site: same-origin' \
+    -H 'Sec-Fetch-User: ?1' \
+    -H 'Upgrade-Insecure-Requests: 1' \
+    -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36' \
+    -H 'sec-ch-ua: "Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"' \
+    -H 'sec-ch-ua-mobile: ?0' \
+    -H 'sec-ch-ua-platform: "macOS"' \
+    --data-raw 'b04f2c7f-5bf4-46d2-95d7-f5a9c699ed5e=86e45d27-a34d-4368-833b-d540359d2ada&a9595bca-f3a3-481d-adc4-6e64e0c3b713=' \
+    --compressed | grep "En este momento no hay citas disponibles."
